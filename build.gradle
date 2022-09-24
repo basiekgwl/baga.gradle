@@ -53,13 +53,6 @@ dependencyManagement {
     }
 }
 
-tasks.named('contracts') {
-    testFramework = org.springframework.cloud.contract.verifier.config.TestFramework.JUNIT5
-}
-
-tasks.named('contractTest') {
-    useJUnitPlatform()
-}
 
 tasks.named('test') {
     useJUnitPlatform()
