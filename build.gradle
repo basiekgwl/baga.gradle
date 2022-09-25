@@ -41,22 +41,22 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.24'
 	annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-//Hazelcast
+	implementation 'org.hibernate:hibernate-entitymanager:5.6.11.Final'
+
+	implementation 'com.google.code.findbugs:annotations:3.0.1'
+
+    //Hazelcast
 	implementation 'com.hazelcast:hazelcast'
 	implementation 'com.hazelcast:hazelcast-spring'
 
-
+	// Tests
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 	testImplementation 'org.springframework.security:spring-security-test'
-
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 
-
-
-	// Tests
 	implementation 'org.codehaus.groovy:groovy-all:3.0.13'
 	testImplementation 'org.spockframework:spock-core:2.2-groovy-3.0'
 	testImplementation 'org.spockframework:spock-spring:2.2-groovy-3.0'
